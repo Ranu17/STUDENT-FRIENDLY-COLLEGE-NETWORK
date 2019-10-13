@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <style>
+        body{
+	background-image: url(image/Blur1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	font-family: sans-serif;
+             }
+        header{
+                font-size: 50px;
+                text-align: center;
+                color:white;
+        }
+        h1{
+	color: white;
+	margin-top: 80px;
+	padding: 0px 0px 20px;
+	text-align: center;
+	font-size: 22px;
+}
+
+        .login-box
+        {
+	height: 670px;
+	width: 420px;
+	background-color: rgba(96,96,96,0.5);
+        margin-top: 60px;
+	top:50%;
+	left: 50%;
+	position: absolute;
+	padding: 20px;
+        transform: translate(-50%,-50%);
+        }
+        .login-box p{
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+	color: white;
+        }
+
+      .login-box input{
+	width: 100%;
+	margin-bottom: 20px;
+        }
+        .login-box input[type="text"], input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.login-box input[type=submit]{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #1c8adb;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+	margin-top: 25px;
+}
+
+
+        a:link{
+	color:white;
+	text-decoration:none;
+	display:block;
+               }
+
+        #sec2{
+                    background-image: url(image/forgot.jpg);
+                    background-attachment: fixed;
+                    background-size:cover ;
+                    height: 190vh;
+             }
+    </style>
+         <!--<link href="Login.css" rel="stylesheet">
+         <link rel="stylesheet" href="fontawesome/css/all.css">-->
+        <title>bus details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section id="sec2">
+        <div class="login-box">
+            <h1>Bus Details</h1>
+       <form name="BusInfoForm" method="post" action="bus_detail.jsp">
+           
+                    <p>TO:</p>
+                    <input type=text name="to" placeholder="Enter Destination" required>
+                     <p>DATE:</p>&nbsp&nbsp
+                     <input name="date" type="date">
+                     <p>ARRIVAL TIME:</p>&nbsp&nbsp
+                    <input  name="arr_time" type="time">
+                    <p>DEPARTURE TIME:</p>&nbsp&nbsp
+                    <input  name="dep_time" type="time">
+                    <p>CONTACT:</p>
+                    <input type="text" name="contact" placeholder="Contact"   title="Must be of 10 digits" required>
+                    <input type="submit" name="Submit" value="Save" onclick="phonenumber()">
+       </form>
+            </div>
+        </section>
+       
+        <script>      
+        function phonenumber()
+                        {
+                          var contact= document.BusInfoForm.contact.value;
+                          //document.write(contact);
+                          // if(contact.length === 10)
+                          var phoneno = /^\{10}$/;
+                         if(contact.match(phoneno))
+                                {
+                              return true;
+                                }
+                              else
+                                {
+                                alert("Not a valid input.Phone number should be of 10 digits.");
+                                return false;
+                                }
+                        }
+            </script>
+    </body>
+</html>

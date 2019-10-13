@@ -1,0 +1,156 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1 Mar, 2019, 9:59:30 PM
+    Author     : Rashi agrawal
+*/
+
+body{
+	background-image: url(image/Blur6.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	font-family: sans-serif;
+}
+
+header{
+    font-size: 50px;
+    text-align: center;
+    color:white;
+}
+img{
+    height: 100px;
+    width: 100px;
+    border-radius:80%;
+    margin-right: 30px;
+    margin-top: 4px;
+}
+@keyframes mycapt{
+    from{color:white;}
+    to{color:transparent;}
+}
+
+#capt{
+    animation-name: mycapt;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    font-size: 20px;
+    margin-left: 500px;
+    text-align: center;
+}
+.login-box{
+	height: 500px;
+	width: 420px;
+	background-color: rgba(96,96,96,0.5);
+        margin-top: 120px;
+	top:50%;
+	left: 50%;
+	position: absolute;
+	padding: 20px;
+        transform: translate(-50%,-50%);
+}
+
+#pic{
+	position: absolute;
+	top: -50px;
+	left:calc(50% - 50px);
+}
+
+h1{
+	color: white;
+	margin-top: 80px;
+	padding: 0px 0px 20px;
+	text-align: center;
+	font-size: 22px;
+}
+
+.login-box p{
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+	color: white;
+}
+
+.login-box input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.login-box input[type="text"], input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.login-box input[type=submit]{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #1c8adb;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+	margin-top: 25px;
+}
+
+    a:link, a:visited{
+    
+                text-decoration: none;
+                color:white;
+                display: block;
+    }          
+            
+
+
+.form-control{
+	margin-top: 15px;
+	outline: none;
+	background: transparent;
+	color: #fff;
+	border-radius: 10px;
+}
+
+#acc{
+	position: absolute;
+	top:431px;
+	margin-left: 210px;
+}
+
+section{
+                    
+                    
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+                    border-style: solid;
+                    border-color:transparent;
+                    border-width: 1px;
+}
+
+#sec1{
+    background-image: url(image/Blur6.jpg);
+                    background-attachment: fixed;
+                    background-size:cover ;
+                    height: 110vh;
+}
+
+#sec2{
+    background-image: url(image/Blur6.jpg);
+                    background-attachment: fixed;
+                    background-size:cover ;
+                    height: 190vh;
+}
+#sec3{
+    background-image: url(image/Blur6.jpg);
+                    background-attachment: fixed;
+                    background-size:cover ;
+                    height: 190vh;
+}

@@ -1,0 +1,253 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 20, 2019, 12:59:37 AM
+    Author     : RASHI
+*/
+@import 
+url(https://fonts.googleapis.com/css?family=Arvo:700);
+@import
+url(https://fonts.googleapis.com/css?family=Seaweed+Script);
+ #ul1{
+                display: block;
+                position: fixed;
+                height: 30px;
+                width: 100%;
+            }
+
+            #ul1 li{
+                     background-color:black;
+                    width:100px;
+                    height:40px;
+                    margin: 1px;
+                    padding-left:10px;
+                    box-shadow: 1px 2px 1px 1px white; 
+                    font-size: 25px;
+                  
+
+            }
+
+            #ul2{
+                height: 700px;
+                width: 300px;
+                list-style-type:none;
+                list-style-position: inside;
+                position:fixed;
+                padding: 0%;
+                top:96px;
+            }
+
+            #ul2 li{
+                    background-color:#2D2C2C;
+                    width:200px;
+                    height:80px;
+                    margin: 1px;
+                    padding-left:10px; 
+                    font-size: 25px;
+                 }
+
+            a:link, a:visited{
+    
+                text-decoration: none;
+                color:white;
+                display: block;
+                
+            }   
+
+            section{
+                    
+                    height: 100vh;
+                    border-style: solid;
+                    border-color:beige;
+                    border-width: 1px;
+                    
+            }
+            #sec0{
+                background-image: url(image/Helllo.jpg);
+                    background-attachment: fixed;
+                    background-size:cover;
+            }
+
+            #sec1{
+                background-image: url(image/Star.jpeg);
+                    background-attachment: fixed;
+                    background-size:cover ;
+            }
+
+            #sec2{
+                background-image: url(image/pix3.jpeg);
+                    background-attachment: fixed;
+                    background-size:cover ;
+            }
+
+            #sec3{
+                background-image: url(image/Found.jpeg);
+                    background-attachment: fixed;
+                    background-size:cover ;
+            }
+
+             #sec4{
+                   background-image: url(image/wall1.jpg);
+                    background-attachment: fixed;
+                    background-size:cover;
+             }
+             
+             #sec5{
+                   background-image: url(image/Bus1.jpg);
+                    background-attachment: fixed;
+                     background-size:cover;
+             }
+              #sec6{
+                   background-image: url(image/Quiz_1.jpg);
+                    background-attachment: fixed;
+                    background-size:cover;
+             }
+              #sec7{
+                   background-image: url(image/Mag1.jpg);
+                    background-attachment: fixed;
+                    background-size:cover;
+             }
+            img{
+                height: 70px;
+                width: 70px;
+                border-radius: 80%;
+            }
+
+            #main-div{
+            height: 600px;
+            width: 800px;
+            background-color: rgba(255,255,255,0.3);
+            margin-left: 300px;
+            padding: 30px;
+            margin-top: 30px;
+            
+        }
+           .button {
+                width:300px;
+                padding: 20px 25px;
+                font-size: 24px;
+                text-align: center;
+                cursor: pointer;
+                outline: none;
+                color: #fff;
+                background-color: #4DAF29;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
+                margin-top: 100px;
+                margin-left:230px;
+                }
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e2e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+        .btn btn-info{
+            outline: none;
+            color: red;
+            border-color: red;
+            height: 70px;
+            width: 120px;
+            border-radius: 10px;
+            display:block;
+            padding-right:200px;
+        
+            position: relative;
+            right:30px;
+            margin-top: 200px;
+            margin-right:200px;
+        }
+        .button.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.button.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.button:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+       
+        
+        .form-control{
+	
+	outline:black;
+  
+	background:transparent;
+	color: #fff;
+	
+}
+
+input[type="text"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 20px;
+        
+}
+
+p{
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+	color: white;
+        font-size: 25px;
+}
+@keyframes mycapt{
+    from{color:white;}
+    to{color:transparent;}
+}
+@keyframes mycapt1{
+    from{color:black;}
+    to{color:transparent;}
+}
+#capt{
+    animation-name: mycapt;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-size: 40px;
+    margin-left: 400px;
+    text-align: center;
+}
+#capt1{
+    animation-name: mycapt1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-size: 40px;
+}
+#front{
+    margin-top: 200px;
+}

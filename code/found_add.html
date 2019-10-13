@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <style>
+        body{
+	background-image: url(image/blur6_1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	font-family: sans-serif;
+             }
+        header{
+                font-size: 50px;
+                text-align: center;
+                color:white;
+        }
+        h1{
+	color: black;
+	margin-top: 80px;
+	padding: 0px 0px 20px;
+	text-align: center;
+	font-size: 22px;
+}
+
+        .login-box
+        {
+	height: 670px;
+	width: 420px;
+	background-color: rgba(214,212,255,0.5);
+        margin-top: 100px;
+	top:50%;
+	left: 20%;
+	position: absolute;
+	padding: 20px;
+        transform: translate(-50%,-50%);
+        }
+        .login-box p{
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+	color: black;
+        }
+
+      .login-box input{
+	width: 100%;
+	margin-bottom: 20px;
+        }
+        .login-box input[type="text"], input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: black;
+	font-size: 16px;
+}
+   p{ color:black; }
+
+.login-box input[type=submit]{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #1c8adb;
+	color: white;
+	font-size: 18px;
+	border-radius: 20px;
+	margin-top: 25px;
+}
+
+
+        a:link{
+	color:black;
+	text-decoration:none;
+	display:block;
+               }
+
+        #sec2{
+                    background-image: url(image/forgot.jpg);
+                    background-attachment: fixed;
+                    background-size:cover ;
+                    height: 190vh;
+             }
+    </style>
+         <!--<link href="Login.css" rel="stylesheet">
+         <link rel="stylesheet" href="fontawesome/css/all.css">-->
+        <title>Found Item Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="icon" href="image/LogoSite.png" type="image/png" sizes="16x16">
+    </head>
+    <body>
+        <section id="sec2">
+        <div class="login-box">
+            <h2 align="center">Found Item Details</h2>
+            <form action="found_detail.jsp">
+       <form name="FoundInfoForm" method="post">
+           
+                    <p>ITEM NAME:</p>
+                    <input type=text name=item_name placeholder="Enter name of found item" required>
+                    <p>FOUND ITEM DESCRIPTION:</p>
+                    <input  name="found_item_des" type="text" placeholder="Enter description of found item">
+                    <p>DATE:</p>&nbsp
+                    <input name="date" type="date">
+                    <p>LOCATION:</p>
+                    <input type="text" name="found_location" placeholder="Enter the location where the item was found">
+                    <p>CONTACT NUMBER:</p>
+                    <input  name="found_contact" type="text"  placeholder="Enter your contact number" required>
+                    <input type="submit" name="Submit" value="Save" onclick="phonenumber();">
+                    
+       </form>
+            </div>
+        </section>
+        <script>      
+        function phonenumber()
+                        {
+                           contact= document.FoundInfoForm.contact;
+                           //if(contact.length == 10)
+                          var phoneno = /^\{10}$/;
+                         if(contact.value.match(phoneno))
+                                {
+                              return true;
+                                }
+                              else
+                                {
+                                alert("Not a valid input.Phone number should be of 10 digits.");
+                                return false;
+                                }
+                        }
+       /* function myrest(){
+            document.getElementsByName("FoundInfoForm").reset();
+        }*/
+            </script>
+    </body>
+</html>

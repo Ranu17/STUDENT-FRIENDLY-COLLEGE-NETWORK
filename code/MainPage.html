@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+
+    <head>
+        <title>Student Friendly College Network</title>
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico" rel="stylesheet">
+        <link href= rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="Login.css" rel="stylesheet">
+        <link href="SignUpSS.css" rel="stylesheet">
+        <link rel="stylesheet" href="fontawesome/css/all.css">
+        <link rel="icon" href="image/LogoSite.png" type="image/png" sizes="16x16">
+       
+    </head>
+    
+        <section id="sec1">
+            <header><img src="image/LogoSite.png">Student Friendly College Network<br>
+            </header>
+            <span id="capt">by the student for the student of the student</span>
+            <div class="login-box">
+                <span class="fa-stack fa-3x" id="pic">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+                </span>
+                <h1>LOGIN</h1>
+                <form action="login.jsp" name="myform"  method="get">
+                    <p>Username</p>
+                    <input type="text" name="smartcard" placeholder="Enter smartcardid" autofocus title="Please provide the valid smartcard id !" required>
+                    <p>Password</p>
+                    <input type="password" name="password" placeholder="Enter password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                    <SELECT class="form-control" name=role>
+                        <option name=role value="ADMIN">ADMIN</option>
+                        <option name=role value="Student">STUDENT</option>
+                    </SELECT>
+                    <input type="submit" name="submit" value="Login"  onclick="validLogin()"><br>
+                    <a href="forget_pass.html">Forgot Password?</a>
+                    <a href="#sec2" id="acc" >Don't have an account?</a>
+                    <br>
+                       <a href="found_add.html" >Other User?</a>
+                </form>
+            </div>
+        </section>
+        <section id="sec2"> 
+            <div class="sign-box">
+                <h1>SIGN UP</h1>
+                <form action="Main1.jsp" onsubmit="return validateForm()" name="Form1">
+                    <p>Smartcard Id</p>
+                    <input type=text name=smartcard_id placeholder="SMARTCARD ID" title="Please enter id in capitals" required>
+                    <p>First Name</p>
+                    <input type=text name=first_name placeholder="FIRST NAME"  required>
+                    <p>Last Name</p>
+                    <input type=text name=last_name placeholder="LAST NAME" >
+                    <p>Father's Name</p>
+                    <input type=text name=father_name placeholder="FATHER'S NAME" required>
+                    <select name="course" class="form-control">
+                        <option value="" disabled selected>
+                            Course
+                        </option>
+                        <option name="course" value="B.Tech">
+                            B.Tech
+                        </option>
+                        <option name="course" value="M.Tech">
+                            M.Tech
+                        </option>
+                        <option name="course" value="BCA">
+                            BCA
+                        </option>
+                    </select>
+                    <br>
+                    <select name="major" class="form-control">
+                        <option value="" disabled selected>
+                            Major
+                        </option>
+                        <option name="major" value="IT">
+                            IT
+                        </option>
+                        <option name="major" value="CS">
+                            CS
+                        </option>
+                        <option name="major"  value="EC">
+                            EC
+                        </option>
+                    </select><br>
+                    <p>Password</p>
+                    <input type="password" name="password" placeholder="PASSWORD" onclick="validateForm()" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
+                    <p>Confirm Password</p>
+                    <input type="password" name="confirm_password" placeholder="RE-TYPE"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                    <br>
+                    <p>Security Answer</p>
+                    <input type=text name="security_answer" placeholder="NAME OF YOUR FIRST SCHOOL">
+                    <input type="submit" name="submit" value="Register"/>
+                </form>
+
+            </div>
+        </section>
+         
+       
+           <script  type="text/javascript">
+              //  var frmvalidator = new Validator("Form1");
+                //frmvalidator.addValidation("Smartcard_id","maxlen=50");
+               // frmvalidator.addValidation("Smartcard_id","req");
+               // frmvalidator.addValidation("FirstName","req","Please enter your First Name");
+               // frmvalidator.addValidation("FirstName","maxlen=20",
+                    //   "Max length for FirstName is 20");
+
+               // frmvalidator.addValidation("LastName","req");
+                //frmvalidator.addValidation("LastName","maxlen=20");
+                //frmvalidator.setAddnlValidationFunction("validateForm");
+
+            function validateForm()
+            {
+                var smartcard_id = document.Form1.smartcard_id.value;
+                var password = document.Form1.password.value;
+                var confirm_password = document.Form1.confirm_password.value;
+                var first_name=document.Form1.first_name.value;
+                var father_name=document.Form1.father_name.value;
+
+                if (smartcard_id == null || smartcard_id == "")
+                {
+                    alert("Please fill this field!\n\
+                             Smartcard can't be blank");
+                    return false;
+                }
+                else if (first_name == null || first_name == "")
+                {
+                    alert("Please fill this field!\n\
+                             First name can't be blank");
+                    return false;
+                }
+                else if (father_name == null || father_name == "")
+                {
+                    alert("Please fill this field!\n\
+                             Father's name can't be blank");
+                    return false;
+                }
+                else if (password.length < 8)
+                {
+                    alert("Password must be at least 8 characters long .");
+                    return false;
+
+                }
+                else if( password !== confirm_password)
+                {
+                    alert("Password don't match .");
+                    return false;
+                }
+            }
+
+            /* function check(form){
+             if(form.smartcard.value === '<%=smartcard_id%>' && form.password.value === '<%=password%>')
+             {
+             window.open('MySite.html');
+             }
+             else
+             {
+             alert("The username and password do not match");
+             }
+             }*/
+
+           /* function confirmPassword(form) {
+               
+                if (form.password.value === form.confirm_password.value) {
+                    window.open('MainPage.html');
+                }
+           
+                else {
+                    alert("The password don't match");
+                }
+            
+        }*/
+
+           /* function myFunction()
+            {
+                var txt;
+                var school = prompt("Please enter your first school name?:", "Enter correct info");
+                if (school == null || school == "")
+                {
+                txt = "User cancelled the prompt.";
+                }
+                else
+                {
+                   fncSubmit()
+                       
+                       
+                }
+            }
+            function fncSubmit()
+            {
+
+                if(document.ChangePasswordForm.OldPassword.value == "")
+                {
+                alert('Please input old password');
+                document.ChangePasswordForm.OldPassword.focus();
+                return false;
+                } 
+
+                if(document.ChangePasswordForm.newpassword.value == "")
+                    {
+                    alert('Please input Password');
+                    document.ChangePasswordForm.newpassword.focus(); 
+                    return false;
+                    } 
+
+                    if(document.ChangePasswordForm.conpassword.value == "")
+                    {
+                    alert('Please input Confirm Password');
+                    document.ChangePasswordForm.conpassword.focus(); 
+                    return false;
+                    } 
+
+                    if(document.ChangePasswordForm.newpassword.value != document.ChangePasswordForm.conpassword.value)
+                    {
+                    alert('Confirm Password Not Match');
+                    document.ChangePasswordForm.conpassword.focus(); 
+                    return false;
+                    } 
+
+                    document.ChangePasswordForm.submit();
+                    }*/
+    
+ 
+                    function validLogin(){
+                    if (document.form.smartcard.value == ""){
+                    alert ( "Please enter Login Name." );
+                    document.myform.userName.focus();
+                    return false;
+                    }
+                    if (document.form.password.value == ""){
+                    alert ( "Please enter password." );
+                    document.myform.password.focus();
+                    return false;
+                    }
+                    alert ( "Welcome User" );
+                    return true;
+                    }
+
+            
+        </script>
+    
+        <footer style="background-color:#303030;
+                padding-top: 30px;
+                padding-bottom:30px;
+                padding-left:30px; 
+                font-size: 20px;
+                color:white;
+                font-family: 'Dancing Script', cursive;">
+            <p> Copyright &copy; Rakhi Singh, Ranu Rajput, Rashi Agrawal</p>
+            <a href="#" data-toggle="tooltip" data-placement="left" title="This website helps you to explore Banasthali and provides interaction among the students.">About Us</a>
+            <a href="#" data-toggle="tooltip" data-placement="left" title="r.rajput1198@gmail.com">Contact Us</a>
+        </footer>
+    

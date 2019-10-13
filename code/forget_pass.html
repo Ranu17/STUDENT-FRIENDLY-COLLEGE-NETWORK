@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+   
+    <head>
+         <style>
+        body{
+	background-image: url(image/Blur1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	font-family: sans-serif;
+             }
+        header{
+                font-size: 50px;
+                text-align: center;
+                color:white;
+        }
+        h1{
+	color: white;
+	margin-top: 80px;
+	padding: 0px 0px 20px;
+	text-align: center;
+	font-size: 22px;
+         }
+
+        .login-box
+        {
+	height: 540px;
+	width: 420px;
+	background-color: rgba(96,96,96,0.5);
+        margin-top: 90px;
+	top:50%;
+	left: 50%;
+	position: absolute;
+	padding: 20px;
+        transform: translate(-50%,-50%);
+        }
+        .login-box p{
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+	color: white;
+        }
+
+      .login-box input{
+	width: 100%;
+	margin-bottom: 20px;
+        }
+        .login-box input[type="text"], input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.login-box input[type=submit]{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #1c8adb;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+	margin-top: 25px;
+}
+
+
+        a:link{
+	color:white;
+	text-decoration:none;
+	display:block;
+               }
+
+        #sec2{
+                    background-image: url(image/forgot.jpg);
+                    background-attachment: fixed;
+                    background-size:cover ;
+                    height: 190vh;
+             }
+    </style>
+         <!--<link href="Login.css" rel="stylesheet">
+         <link rel="stylesheet" href="fontawesome/css/all.css">-->
+        <title>Forget Password</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section id="sec2">
+        <div class="login-box">
+            <h1>CHANGE PASSWORD</h1>
+       <form name="ChangePasswordForm" method="post" action="changepsw.jsp">
+           
+                    <p>Enter your First School Name</p>
+                    <input type=text name=school_name placeholder="Enter First School Name">
+                  
+                     <p>New Password</p>
+                    <input  name="newpassword" type="password" id="newpassword" placeholder="New Password"   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                    <p>Confirm Password</p>
+                    <input  name="conpassword" type="password" id="conpassword" placeholder="Confirm Password" >
+                    <input type="submit" name="Submit" value="Save" onclick="confirmPas()">
+                  
+        </form>
+        </div>
+        </section>
+        <script type="text/javascript">
+
+            /*function validateForm()
+            {
+                var smartcard = document.myform.smartcard.value;
+                var password = document.myform.password.value;
+
+                if (password == null || password == "")
+                {
+                    alert("Please fill this field!\n\
+                             password can't be blank");
+                    return false;
+                }
+                else if (password.length < 8)
+                {
+                    alert("Password must be at least 8 characters long .");
+                    return false;
+
+                }
+            }*/
+            function confirmPas()
+            {
+                var confirm = document.ChangePasswordForm.conpassword.value;
+                var password = document.ChangePasswordForm.newpassword.value;
+                if(confirm!==password)
+                {
+                    alert("Password don't match");
+                    return false;
+                //else
+                   // window.open("forget_pass.html");
+                }
+            }
+         </script>
+    </body>
+</html>
